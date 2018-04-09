@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_MrNacJhQEeeHc_2CtQ5sqw" targetNamespace="http://tns.tibco.com/bw/composite/OCBCDemo.module" name="OCBCDemo.module" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_d7PX0JhQEeeHc_2CtQ5sqw" name="ocbc-demo" promote="ComponentProcess/ocbc-demo">
+    <sca:interface.wsdl xmi:id="_d7U3YJhQEeeHc_2CtQ5sqw" interface="http://xmlns.example.com/20170913142308PLT#wsdl.interface(ocbc-demo)" scaext:wsdlLocation="../Processes/ocbcdemo/module/Process.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_d7Zv4JhQEeeHc_2CtQ5sqw" name="RestService" path="/ocbc/demo" docBasePath="http://localhost:7777/OCBCDemo.module" docResourcePath="OCBCDemo" basePath="/" connector="ocbcdemo.module.OCBCDemo" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/ocbcdemo.module.Process-OCBCDemo.json">
+      <operation xmi:id="_d7aW8JhQEeeHc_2CtQ5sqw" operationName="post" nickname="post-ocbc-demo" httpMethod="POST" responseStyle="element" requestStyle="element">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_d7pAcJhQEeeHc_2CtQ5sqw"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_d7aW8ZhQEeeHc_2CtQ5sqw" bindingName="RestService"/>
+  </sca:service>
+  <sca:property xmi:id="_M_uR4JhQEeeHc_2CtQ5sqw" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_M_zKYJhQEeeHc_2CtQ5sqw" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_M_2NsJhQEeeHc_2CtQ5sqw" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_M_4p8JhQEeeHc_2CtQ5sqw" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_M_7tQJhQEeeHc_2CtQ5sqw" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_M_-JgJhQEeeHc_2CtQ5sqw" name="BW.CLOUD.PORT" type="XMLSchema:int" scalable="true"/>
+  <sca:property xmi:id="_NAAlwJhQEeeHc_2CtQ5sqw" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:component xmi:id="_M0PaoJhQEeeHc_2CtQ5sqw" name="ComponentProcess" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_M0PaoZhQEeeHc_2CtQ5sqw" processName="ocbcdemo.module.Process"/>
+    <sca:service xmi:id="_d7LtcJhQEeeHc_2CtQ5sqw" name="ocbc-demo">
+      <sca:interface.wsdl xmi:id="_d7M7kJhQEeeHc_2CtQ5sqw" interface="http://xmlns.example.com/20170913142308PLT#wsdl.interface(ocbc-demo)" scaext:wsdlLocation="../Processes/ocbcdemo/module/Process.bwp"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>

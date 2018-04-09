@@ -1,0 +1,13 @@
+---
+applications:
+- name: BankCustomerDetails
+  memory: 512M
+  path: CustomerDetails_1.0.0.ear   # EAR file for your Dummy SF application (change this)
+  timeout: 60
+  buildpack:  bwce_buildpack2-3    # Buildpack (change this if using a different buildpack)
+  services:
+   - BankConfigServer     # Service Registry Name (change this)
+   - BankServiceRegistry
+  env:
+    BW_PROFILE: PCF
+    APP_CONFIG_PROFILE: PCF

@@ -1,0 +1,92 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "Summary about the new REST service.",
+    "description" : "Summary about the new REST service."
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/bank/customer/fullinfo" : {
+      "post" : {
+        "description" : "",
+        "operationId" : "post-bank-customer-fullinfo",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/CustomerFullInfoRequestElement"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a CustomerFullInfoResponseElement to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/CustomerFullInfoResponseElement"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "CustomerFullInfoResponseElement" : {
+      "type" : "object",
+      "properties" : {
+        "customer_id" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "city" : {
+          "type" : "string"
+        },
+        "products" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/products",
+            "uniqueItems" : false
+          }
+        }
+      }
+    },
+    "CustomerFullInfoRequestElement" : {
+      "type" : "object",
+      "properties" : {
+        "customer_id" : {
+          "type" : "string"
+        }
+      }
+    },
+    "products" : {
+      "type" : "object",
+      "properties" : {
+        "subscribe_date" : {
+          "type" : "string"
+        },
+        "currency" : {
+          "type" : "string"
+        },
+        "balance" : {
+          "type" : "integer"
+        },
+        "product_id" : {
+          "type" : "string"
+        },
+        "account_id" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

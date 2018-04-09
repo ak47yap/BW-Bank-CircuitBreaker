@@ -1,0 +1,71 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "Summary about the new REST service.",
+    "description" : "Summary about the new REST service."
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/bank/cc/balance" : {
+      "post" : {
+        "description" : "",
+        "operationId" : "post-bank-cc-balance",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/CCBalanceRequestElement"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a CCBalanceResponseElement to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/CCBalanceResponseElement"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "CCBalanceResponseElement" : {
+      "type" : "object",
+      "properties" : {
+        "customer_id" : {
+          "type" : "string"
+        },
+        "card_id" : {
+          "type" : "string"
+        },
+        "balance" : {
+          "type" : "decimal"
+        },
+        "credit_limit" : {
+          "type" : "decimal"
+        },
+        "currency" : {
+          "type" : "string"
+        }
+      }
+    },
+    "CCBalanceRequestElement" : {
+      "type" : "object",
+      "properties" : {
+        "customer_id" : {
+          "type" : "string"
+        },
+        "card_id" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

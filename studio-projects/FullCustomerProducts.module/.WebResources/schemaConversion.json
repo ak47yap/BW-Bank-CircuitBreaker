@@ -1,0 +1,22 @@
+{"records": [
+    {
+        "jsonSchemaLocation": "/FullCustomerProducts.module/Service Descriptors/fullcustomerproducts.module.FullCustomerProducts-BankFullCustomerProducts.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://tns.tibco.com/bw/json/1501555212825"
+    },
+    {
+        "jsonSchemaLocation": "/FullCustomerProducts.module/Service Descriptors/fullcustomerproducts.module.FullCustomerProducts-BankFullCustomerProducts.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://tns.tibco.com/bw/json/1501555430517"
+    },
+    {
+        "jsonSchemaLocation": "/FullCustomerProducts.module/Service Descriptors/customerproducts.module.CustomerProducts-BankCustomerProducts.json",
+        "conversionType": "generated",
+        "xsdSchemaTargetNamespace": "/T1505261346641Converted/JsonSchema"
+    },
+    {
+        "jsonSchemaLocation": "/FullCustomerProducts.module/Service Descriptors/productdetails.module.ProductDetails-BankProductDetails.json",
+        "conversionType": "generated",
+        "xsdSchemaTargetNamespace": "/T1505261353456Converted/JsonSchema"
+    }
+]}

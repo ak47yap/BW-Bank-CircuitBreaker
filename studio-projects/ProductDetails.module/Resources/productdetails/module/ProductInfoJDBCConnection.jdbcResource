@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jdbc="http://xsd.tns.tibco.com/amf/models/sharedresource/jdbc" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmlns:subject="http://xsd.tns.tibco.com/trinity/models/identity/subject" xmi:id="_UO8MgZeeEeeulJfqZUbf0w" name="productdetails.module.ProductInfoJDBCConnection" type="jdbc:JdbcDataSource">
+  <jndi:reference xmi:id="_UO8zkJeeEeeulJfqZUbf0w" key="subjectJndiName" type="subject:SubjectConfiguration" value=""/>
+  <jndi:configuration xsi:type="jdbc:JdbcDataSource" xmi:id="_UO8zkZeeEeeulJfqZUbf0w">
+    <substitutionBindings xmi:id="_VCMOYJeeEeeulJfqZUbf0w" template="username" propName="dbUser"/>
+    <substitutionBindings xmi:id="_VOqkIJeeEeeulJfqZUbf0w" template="password" propName="dbPassword"/>
+    <connectionConfig xsi:type="jdbc:NonXaConnection" xmi:id="_UO8zkpeeEeeulJfqZUbf0w" jdbcDriver="com.ibm.db2.jcc.DB2Driver(DB2 UDB zSeries)" dbURL="jdbc:db2://&lt;hostname>:&lt;port>/&lt;location>:retrieveMessagesFromServerOnGetMessage=true;emulateParameterMetaDataForZCalls=1;">
+      <substitutionBindings xmi:id="_Be7YMJegEeeulJfqZUbf0w" template="dbURL" propName="dbURL"/>
+    </connectionConfig>
+  </jndi:configuration>
+</jndi:namedResource>

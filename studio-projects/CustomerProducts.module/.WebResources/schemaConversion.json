@@ -1,0 +1,12 @@
+{"records": [
+    {
+        "jsonSchemaLocation": "/CustomerProducts.module/Service Descriptors/customerproducts.module.CustomerProducts-BankCustomerProducts.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://tns.tibco.com/bw/json/1505216900440"
+    },
+    {
+        "jsonSchemaLocation": "/CustomerProducts.module/Service Descriptors/customerproducts.module.CustomerProducts-BankCustomerProducts.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://tns.tibco.com/bw/json/1505216972773"
+    }
+]}

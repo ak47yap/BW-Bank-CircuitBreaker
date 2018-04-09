@@ -1,0 +1,57 @@
+cf push BankProductDetails -b bwce_buildpack2-3 -p  --no-start
+cf bind-service BankProductDetails BankConfigServer
+cf bind-service BankProductDetails BankServiceRegistry
+
+cf bind-service BankProductDetails BankAutoScaller
+
+cf push CustomerC2P -b bwce_buildpack2-3 -p CustomerC2P_1.0.0.ear --no-start
+cf bind-service CustomerC2P TelcoConfigServer
+cf bind-service CustomerC2P TelcoServiceRegistry
+cf start CustomerC2P
+
+cf push OCSBalance -b bwce_buildpack2-3 -p OCSBalance_1.0.0.ear --no-start
+cf bind-service OCSBalance TelcoConfigServer
+cf bind-service OCSBalance TelcoServiceRegistry
+cf start OCSBalance
+
+cf push PCRFBalance -b bwce_buildpack2-3 -p PCRFBalance_1.0.0.ear --no-start
+cf bind-service PCRFBalance TelcoConfigServer
+cf bind-service PCRFBalance TelcoServiceRegistry
+cf start PCRFBalance
+
+cf push CustomerDetails -b bwce_buildpack2-3 -p CustomerDetails_1.0.0.ear --no-start
+cf bind-service CustomerDetails TelcoConfigServer
+cf bind-service CustomerDetails TelcoServiceRegistry
+cf start CustomerDetails
+
+cf push CustomerProducts -b bwce_buildpack2-3 -p CustomerProducts_1.0.0.ear --no-start
+cf bind-service CustomerProducts TelcoConfigServer
+cf bind-service CustomerProducts TelcoServiceRegistry
+cf bind-service CustomerProducts TelcoCircuitBreaker
+cf start CustomerProducts
+
+
+
+
+CatalogProductDetails   started           1/1         1G       1G     catalogproductdetails.pcfdemo.tibco.com
+CustomerC2P             started           1/1         1G       1G     customerc2p.pcfdemo.tibco.com
+CustomerDetails         started           1/1         1G       1G     customerdetails.pcfdemo.tibco.com
+CustomerProducts        started           1/1         1G       1G     customerproducts.pcfdemo.tibco.com
+OCSBalance              started           1/1         1G       1G     ocsbalance.pcfdemo.tibco.com
+PCRFBalance             started           1/1         1G       1G     pcrfbalance.pcfdemo.tibco.com
+
+
+cf restage CatalogProductDetails
+cf restage CustomerC2P
+cf restage CustomerDetails
+cf restage CustomerProducts
+cf restage OCSBalance
+cf restage PCRFBalance
+
+
+cf cups Mashery -p ' { "areaUuid": "2692ad32-e74b-431e-bac2-4ee3405d8414","clientId": "3z7c28fwxtxuk8gs4vqb5y7m","clientSecret": "Zq8wcK7WNw","masheryApiServerUri": "https://api.mashery.com","password": "TIbco@123","trafficManagerDomain": "tibcoenablement.api.mashery.com","username": "hcruz"}'
+
+cf bind-service CustomerProducts Mashery
+
+
+cf update-service BankConfigServer -c '{"git": { "uri": "https://github.com/hugomcruz/bankdemo.git"}}'

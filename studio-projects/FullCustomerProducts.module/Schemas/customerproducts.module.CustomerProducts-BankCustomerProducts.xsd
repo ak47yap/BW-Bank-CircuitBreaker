@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema elementFormDefault="qualified" targetNamespace="/T1505261346641Converted/JsonSchema" xmlns:tns="/T1505261346641Converted/JsonSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="CustomerProductsResponseElement" type="tns:CustomerProductsResponseElement"/>
+    <xs:complexType name="CustomerProductsResponseElement">
+        <xs:sequence>
+            <xs:element minOccurs="0" name="subscribe_date" type="xs:string"/>
+            <xs:element minOccurs="0" name="product_id" type="xs:string"/>
+            <xs:element minOccurs="0" name="customer_id" type="xs:string"/>
+            <xs:element minOccurs="0" name="status" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="CustomerProductsResponseElementArray" type="tns:CustomerProductsResponseElementArray"/>
+    <xs:complexType name="CustomerProductsResponseElementArray">
+        <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="CustomerProductsResponseElement" type="tns:CustomerProductsResponseElement"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="CustomerProductsElement" type="tns:CustomerProductsElement"/>
+    <xs:complexType name="CustomerProductsElement">
+        <xs:sequence>
+            <xs:element minOccurs="0" name="customer_id" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

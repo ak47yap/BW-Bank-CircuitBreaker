@@ -1,0 +1,22 @@
+{"records": [
+    {
+        "jsonSchemaLocation": "/CustomerFullInfo.module/Service Descriptors/customerfullinfo.module.CustomerFullInfo-BankCustomerFullInfo.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://tns.tibco.com/bw/json/1501737021599"
+    },
+    {
+        "jsonSchemaLocation": "/CustomerFullInfo.module/Service Descriptors/customerfullinfo.module.CustomerFullInfo-BankCustomerFullInfo.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://tns.tibco.com/bw/json/1501750328959"
+    },
+    {
+        "jsonSchemaLocation": "/CustomerFullInfo.module/Service Descriptors/customerbalances.module.CustomerBalances-BankCustomerBalances.json",
+        "conversionType": "generated",
+        "xsdSchemaTargetNamespace": "/T1505275383307Converted/JsonSchema"
+    },
+    {
+        "jsonSchemaLocation": "/CustomerFullInfo.module/Service Descriptors/customerdetails.module.CustomerDetails-BankCustomerDetails.json",
+        "conversionType": "generated",
+        "xsdSchemaTargetNamespace": "/T1505275386783Converted/JsonSchema"
+    }
+]}

@@ -1,0 +1,71 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "Summary about the new REST service.",
+    "description" : "Summary about the new REST service."
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/bank/banking/balance" : {
+      "post" : {
+        "description" : "",
+        "operationId" : "post-bank-banking-balance",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/BankingBalanceRequestElement"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a BankingBalanceReturnElement to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/BankingBalanceReturnElement"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "BankingBalanceRequestElement" : {
+      "type" : "object",
+      "properties" : {
+        "customer_id" : {
+          "type" : "string"
+        },
+        "product_id" : {
+          "type" : "string"
+        }
+      }
+    },
+    "BankingBalanceReturnElement" : {
+      "type" : "object",
+      "properties" : {
+        "customer_id" : {
+          "type" : "string"
+        },
+        "account_id" : {
+          "type" : "string"
+        },
+        "available_balance" : {
+          "type" : "integer"
+        },
+        "total_balance" : {
+          "type" : "integer"
+        },
+        "currency" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

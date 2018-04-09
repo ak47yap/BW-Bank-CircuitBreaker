@@ -1,0 +1,12 @@
+{"records": [
+    {
+        "jsonSchemaLocation": "/OCBCDemo.module/Service Descriptors/ocbcdemo.module.Process-OCBCDemo.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://tns.tibco.com/bw/json/1505283840802"
+    },
+    {
+        "jsonSchemaLocation": "/OCBCDemo.module/Service Descriptors/ocbcdemo.module.Process-OCBCDemo.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://tns.tibco.com/bw/json/1505283865866"
+    }
+]}

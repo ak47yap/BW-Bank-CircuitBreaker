@@ -1,0 +1,12 @@
+{"records": [
+    {
+        "jsonSchemaLocation": "/BankingBalance.module/Service Descriptors/bankingbalance.module.BankingBalance-BankBankingBalance.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://tns.tibco.com/bw/json/1505210921812"
+    },
+    {
+        "jsonSchemaLocation": "/BankingBalance.module/Service Descriptors/bankingbalance.module.BankingBalance-BankBankingBalance.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://tns.tibco.com/bw/json/1505210860538"
+    }
+]}

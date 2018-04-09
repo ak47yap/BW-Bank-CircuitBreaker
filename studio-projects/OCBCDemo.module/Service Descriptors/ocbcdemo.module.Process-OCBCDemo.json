@@ -1,0 +1,59 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "Summary about the new REST service.",
+    "description" : "Summary about the new REST service."
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/ocbc/demo" : {
+      "post" : {
+        "description" : "",
+        "operationId" : "post-ocbc-demo",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/RequestElement"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a ResponseElement to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseElement"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "RequestElement" : {
+      "type" : "object",
+      "properties" : {
+        "customer_id" : {
+          "type" : "string"
+        }
+      }
+    },
+    "ResponseElement" : {
+      "type" : "object",
+      "properties" : {
+        "name" : {
+          "type" : "string"
+        },
+        "host" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}
